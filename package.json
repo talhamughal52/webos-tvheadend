@@ -12,8 +12,8 @@
         "react-scripts": "^4.0.1"
     },
     "scripts": {
-        "start": "react-scripts start",
-        "build": "react-scripts build",
+        "start": "NODE_OPTIONS=--openssl-legacy-provider PORT=8082 react-scripts start",
+        "build": "NODE_OPTIONS=--openssl-legacy-provider PORT=8082 react-scripts build",
         "test": "react-scripts test",
         "eject": "react-scripts eject",
         "webos:emu": "npm run build && ares-package build service && ares-install com.willinux.tvh.app_${npm_package_version}_all.ipk -d emulator && ares-launch com.willinux.tvh.app -d emulator",
