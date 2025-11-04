@@ -13,12 +13,13 @@
     },
     "scripts": {
         "start": "NODE_OPTIONS=--openssl-legacy-provider PORT=8082 react-scripts start",
-        "build": "NODE_OPTIONS=--openssl-legacy-provider PORT=8082 react-scripts build",
+        "build": "NODE_OPTIONS=--openssl-legacy-provider react-scripts build",
         "test": "react-scripts test",
         "eject": "react-scripts eject",
         "webos:emu": "npm run build && ares-package build service && ares-install com.willinux.tvh.app_${npm_package_version}_all.ipk -d emulator && ares-launch com.willinux.tvh.app -d emulator",
         "webos:emu-rm": "ares-install -d emulator --remove com.willinux.tvh.app",
         "webos:tv": "npm run build && ares-package build service && ares-install com.willinux.tvh.app_${npm_package_version}_all.ipk -d tv && ares-launch com.willinux.tvh.app -d tv",
+        "webos:tv:install": "ares-install com.willinux.tvh.app_${npm_package_version}_all.ipk -d tv && ares-launch com.willinux.tvh.app -d tv",
         "webos:tv-rm": "ares-install -d tv --remove com.willinux.tvh.app",
         "inspect:emu": "ares-inspect -d emulator com.willinux.tvh.app --open",
         "inspect:tv": "ares-inspect -d tv com.willinux.tvh.app --open"
